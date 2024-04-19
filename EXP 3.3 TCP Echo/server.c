@@ -63,6 +63,8 @@ int main() {
 
             // Echo received message back to client
             send(client_socket, buffer, bytes_received, 0);
+            buffer[bytes_recieved] = '\0';
+            printf("%s\n",buffer);
         }
 
         // Close client socket
